@@ -1,0 +1,47 @@
+{
+  "name": "@lincah/func",
+  "version": "0.0.1",
+  "description": "",
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "scripts": {
+    "dts:example": "node scripts/esbuild.dts.js example",
+    "build:example": "node scripts/esbuild.config.js example && node scripts/esbuild.copy-files.js example && pnpm run dts:example"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.39.1",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "esbuild": "^0.27.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^4.0.0",
+    "@google-cloud/secret-manager": "^6.1.1",
+    "@paralleldrive/cuid2": "^3.0.4",
+    "axios": "^1.13.2",
+    "google-auth-library": "^10.5.0",
+    "lodash-es": "^4.17.21",
+    "luxon": "^3.7.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/express-serve-static-core": "5.1.0"
+    }
+  }
+}
